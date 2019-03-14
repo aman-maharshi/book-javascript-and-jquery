@@ -34,35 +34,39 @@ header {
      margin-top: 0;
      text-transform: uppercase;
      letter-spacing: 5px;
- }
-
+}
  /*
     SECTION
  */
- ul {
+ul {
      list-style-type: none;
      margin: 0; padding: 0;
      font-size: 1.3rem;
      text-transform: lowercase;
- }
- li {
+}
+li {
      padding-left: 1em;
      line-height: 2.5em;
      background: #e67e22;
      color: white;
- }
+    
+    position: relative;
+}
+li i {
+    position: absolute;
+    right: 1em;
+    top: 0.8em;
+}
  li:not(:last-child) {
      border-bottom: 2.5px solid rgba(0,0,0,0.3);
- }
-
+}
  /*
     COLOR CLASSES
  */
 
- .hot {
+.hot {
     background:#d35400;
- }
- .cool {
+}
+.cool {
      background: #1abc9c;
- }
-
+}
