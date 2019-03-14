@@ -6,9 +6,15 @@ for (let i = 0; i < hotItems.length; i++) {
         hotItems[i].className = "cool";
     }
 }
-
-// adding a trash box to the first li
 let i = document.getElementsByTagName('i');
+let liIcons = []
+for (var x = 0; x < i.length; x++) {
+    if (x > 0) {
+        liIcons.push(i[x]);
+    }
+}
+liIcons[0].classList.add('fas');
+liIcons[0].classList.add('fa-trash-alt');
 
-i[1].classList.add('fas');
-i[1].classList.add('fa-trash-alt')
+
+
