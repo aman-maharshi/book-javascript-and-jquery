@@ -35,6 +35,16 @@ header {
      text-transform: uppercase;
      letter-spacing: 5px;
 }
+.count {
+    color: #2c3e50;
+    background: white;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1rem;
+    padding-left: 0.4em;
+    padding-right: 0.1em;
+}
+
  /*
     SECTION
  */
@@ -47,10 +57,14 @@ ul {
 li {
      padding-left: 1em;
      line-height: 2.5em;
-     background: #e67e22;
+     background: #1abc9c;
      color: white;
-    
+    cursor: pointer;
     position: relative;
+}
+li:hover {
+    color: black;
+    transition: all ease 0.5s;
 }
 li i {
     position: absolute;
@@ -60,13 +74,9 @@ li i {
  li:not(:last-child) {
      border-bottom: 2.5px solid rgba(0,0,0,0.3);
 }
- /*
-    COLOR CLASSES
- */
 
-.hot {
-    background:#d35400;
-}
-.cool {
-     background: #1abc9c;
+/* fas fa-trash-alt */
+
+.red {
+    color: red;
 }

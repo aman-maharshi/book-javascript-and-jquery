@@ -1,20 +1,28 @@
+// Variables
+let listItems = document.getElementsByTagName('li');
+let count = document.querySelector('.count');
+let ul = document.querySelector('ul');
+let bin = document.querySelector('fas fa-trash-alt');
 
-let hotItems = document.querySelectorAll('.hot');
-for (let i = 0; i < hotItems.length; i++) {
-    // console.log(hotItems[i].textContent);
-    if (i%2 == 0) {
-        hotItems[i].className = "cool";
+count.textContent = listItems.length;
+
+// Event Listeners
+ul.addEventListener('click', addBtn);
+ul.addEventListener('click', removeItem);
+
+
+// Functions
+function addBtn(event) {
+    let box = event.target.querySelector('i');
+    if(box != null && box.className != "fas fa-trash-alt") {
+        box.classList = "fas fa-trash-alt";
     }
 }
-let i = document.getElementsByTagName('i');
-let liIcons = []
-for (var x = 0; x < i.length; x++) {
-    if (x > 0) {
-        liIcons.push(i[x]);
+function removeItem(event) {
+    if (event.target.classList.contains('fas')) {
+        event.target.parentElement.remove();
+        count.textContent = listItems.length;
     }
+
 }
-liIcons[0].classList.add('fas');
-liIcons[0].classList.add('fa-trash-alt');
-
-
 
