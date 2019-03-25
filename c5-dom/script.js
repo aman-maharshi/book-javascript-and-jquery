@@ -1,8 +1,7 @@
 // Variables
-let listItems = document.getElementsByTagName('li');
-let count = document.querySelector('.count');
-let ul = document.querySelector('ul');
-let bin = document.querySelector('fas fa-trash-alt');
+let listItems = document.getElementsByTagName('li'),
+    count = document.querySelector('.count'),
+    ul = document.querySelector('ul');
 
 count.textContent = listItems.length;
 
