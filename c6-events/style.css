@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+    margin: 0; padding: 0;
+}
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Open Sans, sans-serif;
+}
+/*
+    HEADER
+*/
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1em;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+}
+.logo i{
+    font-size: 2em;
+}
+.logo p {
+    margin-top: 2px;
+    font-size: 12px;
+}
+ h2 {
+     text-align: center;
+     margin-top: 0;
+     text-transform: uppercase;
+     letter-spacing: 5px;
+}
+ /*
+    SECTION
+ */
+ section {
+     background: #2c3e50;
+     color: white;
+     height: 350px;
+ }
+ form {
+     display: flex;
+     flex-direction: column;
+     padding: 1.5em;
+ }
+ form > *:not(:last-child) {
+     margin-bottom: 0.8em;
+ }
+ label {
+     font-size: 1.2em;
+ }
+input {
+    height: 2em;
+    border: 0; /* to make the submit button same height as input*/
+}
+#username, #password {
+    font-size: 1em;  
+    border-radius: 5px;
+    color: #2c3e50;
+}
+input[type="submit"] {
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    align-self: flex-end; 
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    background: #ff7675;
+    color: white;
+    box-shadow: 2px 1px 2px white;
+}
+input[type="submit"]:hover {
+    color: #2c3e50;
+    box-shadow: 2px 1px 2px black;
+}
