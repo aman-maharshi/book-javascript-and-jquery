@@ -5,16 +5,23 @@ let un = document.getElementById('username'),
     passFb = document.getElementById('feedback-pass');
 
 // EVENT LISTENERS 
+document.addEventListener('DOMContentLoaded', init);
 un.addEventListener('blur', checkUn);
 un.addEventListener('focus', clearFeedback);
 pass.addEventListener('blur', checkPass);
 pass.addEventListener('focus', clearFeedback);
 
 // FUCTIONS
+function init() {
+    un.focus();
+}
 function checkUn() {
-    if (un.value.length < 5) {
+    if ((un.value != '')&&(un.value.length < 5)) {
         fb.textContent = 'Username must be 5 characters or more';
         // this.nextSibling.nextSibling.textContent = 'Username must be 5 characters or more';
+    }
+    if(un.value == '') {
+        fb.textContent = 'You must enter a valid username';
     }
 }
 function clearFeedback() {
@@ -24,12 +31,15 @@ function clearFeedback() {
 }
 function checkPass() {
     let num = /[0-9]/g;
-    if(pass.value.match(num)) {}   
-    else {
-        passFb.textContent = 'Password must contain a number';
-    } 
-    if(pass.value.length < 5) {
-        passFb.textContent = 'Password must be 5 characters or more'
+    if(pass.value != ''){
+        if(pass.value.match(num)) {}   
+        else {
+            passFb.textContent = 'Password must contain a number';
+        } 
+        if(pass.value.length < 5) {
+            passFb.textContent = 'Password must be 5 characters or more'
+        }
+    } else {
+        passFb.textContent = 'You must enter a password'
     }
-
 }
