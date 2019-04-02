@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+    margin: 0; padding: 0;
+}
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Open Sans, sans-serif;
+}
+/*
+    HEADER
+*/
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1em;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    transition: all 0.3s ease;
+}
+.logo i{
+    font-size: 2em;
+
+}
+.logo p {
+    margin-top: 2px;
+    font-size: 12px;
+}
+ h2 {
+     text-align: center;
+     margin-top: 0;
+     text-transform: uppercase;
+     letter-spacing: 5px;
+}
+ /*
+    SECTION
+ */
+ section {
+     background: #2c3e50;
+     color: white;
+     height: 350px;
+ }
+ form {
+     display: flex;
+     flex-direction: column;
+     padding: 1.5em;
+ }
+ form > *:not(:last-child) {
+     margin-bottom: 0.8em;
+ }
+ label {
+     font-size: 1.2em;
+ }
+input {
+    height: 2em;
+    border: 0; /* to make the submit button same height as input*/
+    font-size: 1em;  
+    border-radius: 5px;
+    color: #2c3e50;
+}
+#mic {
+    /* border: 1px solid pink; */
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+#mic-icon {
+    font-size: 4rem;
+    border-radius: 50%;
+    padding: 0.5em 0.6em;
+    background: #1abc9c;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+#mic-icon:hover {
+    border: 2px solid white;
+}
+#mic-icon:active {
+    border: 2px solid #2c3e50;
+    color: #2c3e50;
+}
+
